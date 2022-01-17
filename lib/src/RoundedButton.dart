@@ -6,12 +6,14 @@ class RoundedButton extends StatelessWidget {
   Color color;
   double radius;
   String text;
+  Color textColor;
   RoundedButton(
       {Key? key,
       this.color = Colors.green,
       this.height = 80,
       this.width = 250,
       this.radius = 25,
+      this.textColor = Colors.white,
       this.text = 'button'})
       : super(key: key);
 
@@ -23,7 +25,10 @@ class RoundedButton extends StatelessWidget {
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(radius), color: color),
       child: Center(
-        child: Text(text),
+        child: Text(
+          text,
+          style: TextStyle(color: textColor, fontWeight: FontWeight.normal),
+        ),
       ),
     );
   }
