@@ -11,7 +11,7 @@ class RoundedButton extends StatelessWidget {
       this.color = Colors.green,
       this.height = 80,
       this.width = 250,
-      this.radius= 25,
+      this.radius = 25,
       this.text = 'button'})
       : super(key: key);
 
@@ -21,8 +21,10 @@ class RoundedButton extends StatelessWidget {
       height: height,
       width: width,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(radius),
-        color: color),
+          borderRadius: BorderRadius.circular(radius), color: color),
+      child: Center(
+        child: Text(text),
+      ),
     );
   }
 }
